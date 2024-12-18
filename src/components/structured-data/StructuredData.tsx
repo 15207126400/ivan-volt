@@ -1,3 +1,5 @@
+import { name, introduction } from '@/config/infoConfig'
+
 export function WebsiteStructuredData() {
   const structuredData = {
     "@context": "https://schema.org",
