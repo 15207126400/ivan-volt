@@ -2,15 +2,15 @@
 export const name = 'Ivan'
 export const headline = 'Software engineer, Full-Stack web developer, and indie hacker.'
 export const introduction = 'I’m Ivan, a software engineer based in Wuhan, China. I like coding, and building interesting things'
-export const email = 'iamcoreychiu@gmail.com'
-export const githubUsername = 'iamcorey'
+export const email = 'yanzisu815@gmail.com'
+export const githubUsername = '15207126400'
 
 // about page
-export const aboutMeHeadline = "I'm Ivan, a software engineer based in Shenzhen, China."
+export const aboutMeHeadline = "I'm Ivan, a software engineer based in Wuhan, China."
 export const aboutParagraphs = [
   "I love coding. I learned programming when I in college. I wrote my first program in Java when I was 18.",
   "I have a lot of hobbies, such as travelling, photography, watching movies, music and so on.",
-  "I'm working as a software develop engineer in Shenzhen, China now. And I'm building a lot of side projects in my spare time."
+  "I'm working as a software develop engineer in Wuhan, China now. And I'm building a lot of side projects in my spare time."
 ]
 
 
@@ -29,7 +29,7 @@ export const changelogIntro = "Check out the latest changes to this site."
 
 
 // friends
-export const friendsHeadLine = "Corey' friends"
+export const friendsHeadLine = "Ivan' friends"
 export const friendsIntro = "Meet some interesting friends."
 
 // social links
@@ -59,7 +59,7 @@ export const socialLinks: Array<SocialLinkType> = [
   {
     name: 'Github',
     icon: 'github',
-    href: 'https://github.com/iamcorey'
+    href: 'https://github.com/15207126400'
   },
   {
     name: 'Wechat',
@@ -135,6 +135,16 @@ export type ProjectItemType = {
 // projects 
 export const projects: Array<ProjectItemType> = [
   {
+    name: 'Ivan Volte',
+    description:
+      'A website about me.',
+    link: { href: 'ivanvolte.com', label: 'Ivan Volte' },
+    logo: '/images/icon/ivanvolt.png',
+    category: ['Website'],
+    techStack: ['Next.js', 'TailwindCSS', 'Shadcn/UI'],
+    tags: ['me', 'website', 'blog']
+  },
+  {
     name: 'Be Guess',
     description:
       'One-stop solution to various tool.',
@@ -152,7 +162,16 @@ export const projects: Array<ProjectItemType> = [
     logo: '/images/icon/fourwordgame.png',
     category: ['Website'],
     techStack: ['vue3', 'tailwindcss'],
-    tags: ['game', 'idioms', 'play', 'chinese']
+    tags: ['game', 'idioms', 'wechat', 'chinese']
+  },
+  {
+    name: '青柠客壁纸',
+    description: 'A fresh wallpaper applet.',
+    link: { href: '/images/qrcode/qingningk-wallpaper-qrcode.jpg', label: 'qingningk wallpaper applet' },
+    logo: '/images/icon/qingningk-wallpaper.jpg',
+    category: ['Wechat Mini Program'],
+    techStack: ['wechat', 'typescript'],
+    tags: ['wallpaper','applet','wechat']
   },
   {
     name: '休闲趣味连线',
@@ -202,14 +221,7 @@ export const githubProjects: Array<ProjectItemType> = [
     description:
       'A bot getting product hunt daily top products',
     link: { href: 'github.com/iAmCorey/producthunt-daily-bot', label: 'Producthunt Daily Bot' },
-  },
-  {
-    name: 'Cantonese Echoes',
-    description:
-      'Cantonese Echoes / 粵語殘片',
-    link: { href: 'github.com/iAmCorey/Cantonese-Echoes', label: 'Cantonese Echoes' },
-    gitStars: 1
-  },
+  }
 ]
 
 // changelog
@@ -223,7 +235,7 @@ export type ChangelogItemType = {
 
 export const changelogList: Array<ChangelogItemType> = [
   {
-    date: '2024-11-18',
+    date: '2024-12-18',
     content: [
       {
         title: '💡 Idea come up',
@@ -232,7 +244,7 @@ export const changelogList: Array<ChangelogItemType> = [
     ]
   },
   {
-    date: '2024-11-22',
+    date: '2024-12-22',
     content: [
       {
         title: '🛫 Project deployed',
@@ -241,7 +253,7 @@ export const changelogList: Array<ChangelogItemType> = [
     ]
   },
   {
-    date: '2024-12-10',
+    date: '2024-12-28',
     content: [
       {
         title: '👭 Add friends page',
@@ -250,7 +262,7 @@ export const changelogList: Array<ChangelogItemType> = [
     ]
   },
   {
-    date: '2024-12-11',
+    date: '2024-12-30',
     content: [
       {
         title: '🌿 Open source',
@@ -296,10 +308,6 @@ export type FriendItemType = {
 }
 
 export const friends: Array<FriendItemType> = [
-  {
-    name: 'Ivan',
-    link: { href: 'https://coreychiu.com' },
-  },
   {
     name: 'Axis Wang',
     link: { href: 'https://wangxs.cfd' },
