@@ -2,7 +2,7 @@
 // personal info
 export const name = 'Ivan'
 export const headline = 'Software engineer, Full-Stack web developer, and indie hacker.'
-export const introduction = 'I’m Corey, a software engineer based in Shenzhen, China. I like coding, and building interesting things'
+export const introduction = 'I’m Ivan, a software engineer based in Wuhan, China. I like coding, and building interesting things'
 export const email = 'iamcoreychiu@gmail.com'
 export const githubUsername = 'iamcorey'
 
@@ -136,65 +136,35 @@ export type ProjectItemType = {
 // projects 
 export const projects: Array<ProjectItemType> = [
   {
-    name: 'AI Best Tools',
+    name: 'Be Guess',
     description:
-      'Find the best AI tools in AIBest.tools',
-    link: { href: 'aibest.tools', label: 'AI Best Tools' },
-    logo: '/images/icon/aibesttools.png',
+      'One-stop solution to various tool.',
+    link: { href: 'beguess.com', label: 'BeGuess' },
+    logo: '/images/icon/beguess.png',
     category: ['Website'],
     techStack: ['Next.js', 'TailwindCSS', 'Shadcn/UI'],
-    tags: ['AI', 'Tools Directory']
+    tags: ['i18n', 'json', 'yaml', 'base64', 'tools']
   },
   {
-    name: 'Best Directories',
+    name: 'Four Word Game',
     description:
-      'Your ultimate directory of directories.',
-    link: { href: 'bestdirectories.org', label: 'Best Directories' },
-    logo: '/images/icon/bestdirectories.png',
+      'Chinese Four-Character Idioms Game.',
+    link: { href: 'fourwordgame.com', label: 'Four Word Game' },
+    logo: '/images/icon/fourwordgame.png',
     category: ['Website'],
-    techStack: ['Next.js', 'TailwindCSS', 'Shadcn/UI'],
-    tags: ['Directory of Directories']
+    techStack: ['vue3', 'tailwindcss'],
+    tags: ['game', 'idioms', 'play', 'chinese']
   },
   {
-    name: 'User Growth',
+    name: 'Four Word Game',
     description:
-      'Boost Your business growth with UserGrowth.link',
-    link: { href: 'usergrowth.link', label: 'User Growth' },
-    logo: '/images/icon/usergrowth.ico',
-    category: ['Website'],
-    techStack: ['Next.js', 'TailwindCSS', 'Shadcn/UI'],
-    tags: ['User Growth', 'Marketing', 'SEO']
-  },
-  {
-    name: 'Dev Toolset',
-    description:
-      'Open-source database-free tools directory.',
-    link: { href: 'devtoolset.net', label: 'Dev Toolset' },
-    logo: '/images/icon/devtoolset.png',
-    category: ['Website'],
-    techStack: ['Next.js', 'TailwindCSS', 'Shadcn/UI'],
-    tags: ['Open Source', 'Database-Free', 'Tools Directory']
-  },
-  {
-    name: 'Domain Score',
-    description:
-      'Ultimate AI-Powered tool for domain scoring and evaluation',
-    link: { href: 'domainscore.ai', label: 'Domain Score' },
-    logo: '/images/icon/domainscore.png',
-    category: ['Website'],
-    techStack: ['Next.js', 'TailwindCSS', 'Shadcn/UI'],
-    tags: ['Domain', 'AI', 'SEO']
-  },
-  {
-    name: 'MagicBox Tools',
-    description:
-      'Find the best AI tools in MagicBox.tools',
-    link: { href: 'magicbox.tools', label: 'MagicBox Tools' },
-    logo: '/images/icon/magicbox.png',
-    category: ['Website'],
-    techStack: ['Next.js', 'TailwindCSS', 'Shadcn/UI'],
-    tags: ['AI', 'Tools Directory']
-  },
+      'Chinese Four-Character Idioms Game.',
+    link: { href: 'fourwordgame.com', label: 'Four Word Game' },
+    logo: '/images/icon/fourwordgame.png',
+    category: ['Wechat Mini Program'],
+    techStack: ['vue3', 'tailwindcss'],
+    tags: ['game', 'idioms', 'play', 'chinese']
+  }
 ]
 
 export const githubProjects: Array<ProjectItemType> = [
