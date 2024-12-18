@@ -11,20 +11,21 @@ export const metadata: Metadata = {
     template: `%s - ${name}`,
     default: `${name} - ${headline}`,
   },
-  description: `${introduction}`,
+  description: introduction,
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: process.env.NEXT_PUBLIC_SITE_URL,
+    url: '/',
     siteName: name,
     title: `${name} - ${headline}`,
     description: introduction,
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_SITE_URL}/og-image.jpg`,
+        url: '/ivanvolt-index.jpg',
         width: 1200,
         height: 630,
-        alt: name,
+        alt: `${name}'s Portfolio`,
       }
     ],
   },
@@ -32,8 +33,8 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: `${name} - ${headline}`,
     description: introduction,
-    creator: '@your_twitter_handle',
-    images: [`${process.env.NEXT_PUBLIC_SITE_URL}/og-image.jpg`],
+    creator: '@ivanvolt',
+    images: ['/ivanvolt-index.jpg'],
   },
   robots: {
     index: true,
@@ -44,6 +45,11 @@ export const metadata: Metadata = {
       'max-video-preview': -1,
       'max-image-preview': 'large',
       'max-snippet': -1,
+    },
+  },
+  alternates: {
+    types: {
+      'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed`,
     },
   },
 }
