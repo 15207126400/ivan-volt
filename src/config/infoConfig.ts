@@ -138,7 +138,7 @@ export const projects: Array<ProjectItemType> = [
     name: 'Ivan Volte',
     description:
       'A website about me.',
-    link: { href: 'ivanvolte.com', label: 'Ivan Volte' },
+    link: { href: 'ivanvolt.com', label: 'Ivan Volte' },
     logo: '/images/icon/ivanvolt.png',
     category: ['Website'],
     techStack: ['Next.js', 'TailwindCSS', 'Shadcn/UI'],

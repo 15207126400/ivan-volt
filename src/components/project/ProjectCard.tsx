@@ -7,7 +7,12 @@ import { utm_source } from '@/config/siteConfig'
 import Link from 'next/link'
 import { HashIcon } from 'lucide-react'
 import { useState } from 'react'
-import { PROJECT_CATEGORIES } from '@/config/constants'
+
+// 定义项目类别常量
+const PROJECT_CATEGORIES = {
+  WEBSITE: 'Website',
+  MINIPROGRAM: 'Wechat Mini Program'
+} as const
 
 export function ProjectCard({ project, titleAs }: { project: ProjectItemType, titleAs?: keyof JSX.IntrinsicElements }) {
   const [showQRCode, setShowQRCode] = useState(false)
@@ -96,23 +101,26 @@ export function ProjectCard({ project, titleAs }: { project: ProjectItemType, ti
         <div className="absolute top-2 right-4 z-20">
           <ArrowUpRight size={16} className="h-4 w-4 group-hover:text-primary" />
         </div>
-        
-        {/* 小程序二维码 */}
-        {isMiniProgram && showQRCode && (
-          <div className="absolute -top-2 -right-2 p-4 bg-white rounded-lg shadow-lg dark:bg-zinc-800 z-30 transform translate-x-full">
+      </div>
+      
+      {/* 小程序二维码 */}
+      {isMiniProgram && showQRCode && (
+        <div className="absolute left-1/2 -bottom-2 p-4 bg-white dark:bg-zinc-900 rounded-lg shadow-lg z-[999] transform -translate-x-1/2 translate-y-full border border-muted-foreground/20">
+          {/* 上方小三角 */}
+          <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 rotate-45 bg-white dark:bg-zinc-900 border-l border-t border-muted-foreground/20" />
+          <div className="relative w-[160px] h-[160px]">
             <Image
               src={project.link.href}
               alt={`${project.name} QR Code`}
-              width={160}
-              height={160}
-              className="rounded-lg"
+              fill
+              className="rounded-lg object-contain"
             />
-            <p className="text-xs text-center mt-2 text-muted-foreground">
-              扫码访问小程序
-            </p>
           </div>
-        )}
-      </div>
+          <p className="text-xs text-center mt-2 text-muted-foreground">
+            扫码访问小程序
+          </p>
+        </div>
+      )}
     </li>
   )
 }
