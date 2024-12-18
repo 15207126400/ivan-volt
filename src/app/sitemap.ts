@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { getAllBlogs } from '@/lib/blogs'
+import { projects, githubProjects } from '@/config/infoConfig'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL
@@ -28,5 +29,30 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }))
 
-  return [...routes, ...blogRoutes]
+  // 作品路由
+  const projectRoutes = projects
+    .filter(project => project.link?.href) // 确保链接存在
+    .map((project) => ({
+      url: `${baseUrl}/projects#${project.name.toLowerCase().replace(/\s+/g, '-')}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.5,
+    }))
+
+  // 开源项目路由
+  const githubProjectRoutes = githubProjects
+    .filter(project => project.link?.href) // 确保链接存在
+    .map((project) => ({
+      url: `${baseUrl}/projects#${project.name.toLowerCase().replace(/\s+/g, '-')}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.5,
+    }))
+
+  return [
+    ...routes,
+    ...blogRoutes,
+    ...projectRoutes,
+    ...githubProjectRoutes,
+  ]
 } 
