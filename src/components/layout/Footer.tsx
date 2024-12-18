@@ -40,7 +40,7 @@ export function Footer() {
               <div className='flex flex-col justify-center items-start'>
                 <div className='flex flex-row justify-end items-center gap-2'>
                   <p className="text-sm text-muted-foreground">
-                    &copy; {new Date().getFullYear()} {name}. All rights reserved.
+                    &copy; {new Date().getFullYear()} IvanVolt. All rights reserved.
                   </p>
                   <ThemeToggle />
                 </div>

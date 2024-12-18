@@ -79,18 +79,6 @@ export type EducationItemType = {
   end: string
 }
 
-
-
-export const educationList: Array<EducationItemType> = [
-  {
-    school: 'Not a school',
-    major: 'Computer Science and Technology',
-    logo: 'college',
-    start: '2016',
-    end: '2020'
-  },
-]
-
 // career
 export type CareerItemType = {
   company: string
@@ -102,14 +90,25 @@ export type CareerItemType = {
 }
 
 
-
+// corp
 export const careerList: Array<CareerItemType> = [
   {
-    company: 'Not a corp',
+    company: 'Not convenient to disclose',
     title: 'Software Engineer',
     logo: 'bank',
-    start: '2020',
+    start: '2018',
     end: 'Present'
+  },
+]
+
+// school
+export const educationList: Array<EducationItemType> = [
+  {
+    school: 'Wuhan University of Technology',
+    major: 'Computer Science and Technology',
+    logo: 'college',
+    start: '2014',
+    end: '2018'
   },
 ]
 
