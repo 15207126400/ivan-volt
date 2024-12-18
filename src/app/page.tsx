@@ -12,12 +12,10 @@ import { GithubProjectCard } from '@/components/project/GithubProjectCard'
 import { projectHeadLine, projectIntro, projects, githubProjects, blogHeadLine, blogIntro, techIcons } from '@/config/infoConfig'
 import GithubContributions from '@/components/home/GithubCalendar'
 import { CustomIcon } from '@/components/shared/CustomIcon'
-import IconCloud from "@/components/ui/icon-cloud";
-import { VisitorStats } from '@/components/stats/VisitorStats';
+import { IconCloud } from "@/components/ui/icon-cloud";
 
 export default async function Home() {
   let blogList = (await getAllBlogs()).slice(0, 4)
-  // console.log('blogList: ', blogList)
 
   return (
     <>
@@ -92,12 +90,9 @@ export default async function Home() {
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             <Career />
             <Education />
-
-            {/* <Newsletter /> */}
             <Feed />
           </div>
         </div>
-        <VisitorStats />
       </Container>
     </>
   )

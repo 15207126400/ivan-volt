@@ -10,7 +10,7 @@ import {
   SimpleIcon,
 } from "react-icon-cloud";
 
-export const cloudProps: Omit<ICloud, "children"> = {
+const cloudProps: Omit<ICloud, "children"> = {
   containerProps: {
     style: {
       display: "flex",
@@ -33,11 +33,10 @@ export const cloudProps: Omit<ICloud, "children"> = {
     outlineColour: "#0000",
     maxSpeed: 0.04,
     minSpeed: 0.02,
-    // dragControl: false,
   },
 };
 
-export const renderCustomIcon = (icon: SimpleIcon, theme: string) => {
+const renderCustomIcon = (icon: SimpleIcon, theme: string) => {
   const bgHex = theme === "light" ? "#f3f2ef" : "#080510";
   const fallbackHex = theme === "light" ? "#6e6e73" : "#ffffff";
   const minContrastRatio = theme === "dark" ? 2 : 1.2;
@@ -57,17 +56,19 @@ export const renderCustomIcon = (icon: SimpleIcon, theme: string) => {
   });
 };
 
-export type DynamicCloudProps = {
+export interface DynamicCloudProps {
   iconSlugs: string[];
-};
+}
 
 type IconData = Awaited<ReturnType<typeof fetchSimpleIcons>>;
 
-export default function IconCloud({ iconSlugs }: DynamicCloudProps) {
+export function IconCloud({ iconSlugs }: DynamicCloudProps) {
   const [data, setData] = useState<IconData | null>(null);
   const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     fetchSimpleIcons({ slugs: iconSlugs }).then(setData);
   }, [iconSlugs]);
 
@@ -79,10 +80,18 @@ export default function IconCloud({ iconSlugs }: DynamicCloudProps) {
     );
   }, [data, theme]);
 
+  if (!mounted) {
+    return null;
+  }
+
   return (
-    // @ts-ignore
-    <Cloud {...cloudProps}>
-      <>{renderedIcons}</>
+    <Cloud
+      {...cloudProps}
+      id="tech-stack-cloud"
+    >
+      {renderedIcons}
     </Cloud>
   );
 }
+
+export default IconCloud;
