@@ -1,4 +1,3 @@
-
 // personal info
 export const name = 'Ivan'
 export const headline = 'Software engineer, Full-Stack web developer, and indie hacker.'
@@ -17,7 +16,7 @@ export const aboutParagraphs = [
 
 // projects
 export const projectHeadLine = "What I've done and what I'm doing."
-export const projectIntro = "I've worked on a variety of projects, from simple websites to complex web applications. And many of them are open-source. Here are a few of my favorites."
+export const projectIntro = "I've worked on a variety of projects, from simple small programs to complex web sites. Many of them are already online. Here are some of my favorites."
 
 
 // blog
@@ -156,14 +155,13 @@ export const projects: Array<ProjectItemType> = [
     tags: ['game', 'idioms', 'play', 'chinese']
   },
   {
-    name: 'Four Word Game',
-    description:
-      'Chinese Four-Character Idioms Game.',
-    link: { href: 'fourwordgame.com', label: 'Four Word Game' },
-    logo: '/images/icon/fourwordgame.png',
+    name: '休闲趣味连线',
+    description: 'A fun connecting game.',
+    link: { href: '/images/qrcode/line-game-qrcode.jpg', label: 'Line Game' },
+    logo: '/images/icon/line-game.png',
     category: ['Wechat Mini Program'],
-    techStack: ['vue3', 'tailwindcss'],
-    tags: ['game', 'idioms', 'play', 'chinese']
+    techStack: ['wechat', 'typescript'],
+    tags: ['number','game', 'line']
   }
 ]
 
