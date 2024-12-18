@@ -8,7 +8,7 @@ export const githubUsername = '15207126400'
 // about page
 export const aboutMeHeadline = "I'm Ivan, a software engineer based in Wuhan, China."
 export const aboutParagraphs = [
-  "I love coding. I learned programming when I in college. I wrote my first program in Java when I was 18.",
+  "I love coding because it's like creating an intangible piece of art - every line of code is my brush and every feature is my work.",
   "I have a lot of hobbies, such as travelling, photography, watching movies, music and so on.",
   "I'm working as a software develop engineer in Wuhan, China now. And I'm building a lot of side projects in my spare time."
 ]
@@ -21,7 +21,7 @@ export const projectIntro = "I've worked on a variety of projects, from simple s
 
 // blog
 export const blogHeadLine = "What I've thinking about."
-export const blogIntro = "I've written something about AI, programming and life."
+export const blogIntro = "I want to make a column that selects open source projects, as well as the practical tools compiled during the independent development process during this period, which can be found on my official account and the little newsboy in the future."
 
 // changelog
 export const changelogHeadLine = "What's new about this site"
@@ -44,17 +44,12 @@ export const socialLinks: Array<SocialLinkType> = [
   {
     name: 'X',
     icon: 'x',
-    href: 'https://x.com/realcoreychiu'
-  },
-  {
-    name: 'Bsky',
-    icon: 'bsky',
-    href: 'https://bsky.app/profile/coreychiu.com'
+    href: 'https://x.com/yanzisu815'
   },
   {
     name: 'Jike',
     icon: 'pill',
-    href: 'https://okjk.co/P7c1zU'
+    href: 'https://okjk.co/dJDsEj'
   },
   {
     name: 'Github',
@@ -67,9 +62,9 @@ export const socialLinks: Array<SocialLinkType> = [
     href: 'https://mp.weixin.qq.com/s/DxnRgqNfgzXIhqj6w_x0dQ'
   },
   {
-    name: 'Ko-fi',
+    name: 'xiaobot',
     icon: 'coffee',
-    href: 'https://ko-fi.com/coreychiu'
+    href: 'https://www.xiaobot.net/p/Ivan?refer=4e741fc7-a1a4-4ea6-b0ed-df7240073f2a'
   }
 ]
 
@@ -186,41 +181,18 @@ export const projects: Array<ProjectItemType> = [
 
 export const githubProjects: Array<ProjectItemType> = [
   {
-    name: 'Devtoolset',
-    description: 'Open-source & database-free developer tools navigator / 开源无数据库配置的开发者工具导航站',
-    link: { href: 'github.com/iAmCorey/devtoolset', label: 'Devtoolset' },
-    gitStars: 146,
-    gitForks: 47
+    name: 'ivan-volt',
+    description: 'A lightweight starter template for streamlined app development.',
+    link: { href: 'github.com/15207126400/ivan-volt', label: 'ivan-volt on GitHub' },
+    gitStars: 1,
+    gitForks: 1
   },
   {
-    name: 'Chrome Extension Plasmo Template',
-    description:
-      'A chrome extension template using plasmo, tailwind css, shadcn/ui',
-    link: { href: 'github.com/iAmCorey/chrome-extension-plasmo-template', label: 'Chrome Extension Plasmo Template' },
-    gitStars: 52,
-    gitForks: 10
-  },
-  {
-    name: 'Awesome Indie Hacker Tools',
-    description:
-      '独立开发/出海开发相关技术栈及工具收录 / Find the best tools for indie hackers here',
-    link: { href: 'github.com/iAmCorey/awesome-indie-hacker-tools', label: 'Awesome Indie Hacker Tools' },
-    gitStars: 763,
-    gitForks: 61
-  },
-  {
-    name: 'Awesome AI Directory',
-    description:
-      'AI资源工具导航站收录 / Find all the best AI directories',
-    link: { href: 'github.com/iAmCorey/awesome-ai-directory', label: 'Awesome AI Directory' },
-    gitStars: 37,
-    gitForks: 5
-  },
-  {
-    name: 'Producthunt Daily Bot',
-    description:
-      'A bot getting product hunt daily top products',
-    link: { href: 'github.com/iAmCorey/producthunt-daily-bot', label: 'Producthunt Daily Bot' },
+    name: 'ivan-wallpaper-wechat',
+    description: 'ivan-wallpaper-wechat is a selected wallpaper application based on the WeChat applet.',
+    link: { href: 'github.com/15207126400/ivan-wallpaper-wechat', label: 'wallpaper wechat' },
+    gitStars: 2,
+    gitForks: 1
   }
 ]
 
@@ -308,34 +280,10 @@ export type FriendItemType = {
 }
 
 export const friends: Array<FriendItemType> = [
-  {
-    name: 'Axis Wang',
-    link: { href: 'https://wangxs.cfd' },
-  },
-  {
-    name: 'Greener-Dalii Studio',
-    link: { href: 'https://greenerdalii.top' },
-  },
-  {
-    name: 'Luolink',
-    link: { href: 'https://luolink.com' },
-  },
-  {
-    name: 'Frend guo',
-    link: { href: 'https://frendguo.com' },
-  },
-  {
-    name: 'Amon Xu',
-    link: { href: 'https://amonxu.com' },
-  },
-  {
-    name: 'Bill Fu',
-    link: { href: 'https://billfu.com' },
-  },
-  {
-    name: 'SavoKiss',
-    link: { href: 'https://savokiss.com' },
-  },
+  // {
+  //   name: 'Axis Wang',
+  //   link: { href: 'https://wangxs.cfd' },
+  // }
 ]
 
 

@@ -6,13 +6,22 @@ import { ProjectItemType } from '@/config/infoConfig'
 import { utm_source } from '@/config/siteConfig'
 import Link from 'next/link'
 
-
 export function GithubProjectCard({ project, titleAs }: { project: ProjectItemType, titleAs?: keyof JSX.IntrinsicElements }) {
   const utmLink = `https://${project.link.href}?utm_source=${utm_source}`
   let Component = titleAs ?? 'h2'
+
+  const handleClick = () => {
+    window.open(utmLink, '_blank')
+  }
+
   return (
-    <li className='group relative flex flex-col items-start h-full'>
-      <div className="relative flex flex-col justify-between h-full w-full py-5  px-6 rounded-2xl border border-muted-foreground/20 shadow-sm transition-all group-hover:scale-[1.03] group-hover:shadow-md group-hover:bg-muted/5">
+    <li 
+      className='group relative flex flex-col items-start h-full cursor-pointer'
+      onClick={handleClick}
+      role="button"
+      tabIndex={0}
+    >
+      <div className="relative flex flex-col justify-between h-full w-full py-5 px-6 rounded-2xl border border-muted-foreground/20 shadow-sm transition-all group-hover:scale-[1.03] group-hover:shadow-md group-hover:bg-muted/5">
         <div className=''>
           <div className='flex flex-col sm:flex-row justify-center sm:justify-start items-start sm:items-center gap-2'>
             <BookOpen size={20} weight="duotone" />
@@ -27,13 +36,13 @@ export function GithubProjectCard({ project, titleAs }: { project: ProjectItemTy
 
         <div className="relative z-10 mt-auto pt-4">
           <div className='flex flex-row items-center gap-2 text-xs font-semibold opacity-80'>
-            { project.gitStars && (
+            {project.gitStars && (
               <>
                 <Star size={16} weight="duotone" /> 
                 {project.gitStars}
               </>
             )}
-            { project.gitForks && (
+            {project.gitForks && (
               <>
                 <GitFork size={16} weight="duotone" /> 
                 {project.gitForks}
@@ -41,13 +50,11 @@ export function GithubProjectCard({ project, titleAs }: { project: ProjectItemTy
             )}
           </div>
         </div>
-        <Link
-          href={utmLink}
-          target='_blank'
-          rel='noopener noreferrer'
-          className='h-full w-full absolute'>
-          <ArrowRight size={32} weight="duotone" className="absolute bottom-10 right-10 h-4 w-4 group-hover:text-primary" />
-        </Link>
+
+        {/* 右上角箭头图标 */}
+        <div className="absolute top-5 right-6">
+          <ArrowRight size={16} weight="duotone" className="h-4 w-4 group-hover:text-primary transition-colors" />
+        </div>
       </div>
     </li>
   )
