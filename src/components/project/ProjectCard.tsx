@@ -32,6 +32,10 @@ export function ProjectCard({ project, titleAs }: { project: ProjectItemType, ti
     }
   }
 
+  // 修改 favicon 获取 URL 为 HTTPS
+  const faviconUrl = project.logo ?? 
+    `https://www.google.com/s2/favicons?client=SOCIAL&type=FAVICON&url=https://${project.link.href}&sz=32`;
+
   return (
     <li 
       className='group relative flex flex-col items-start h-full'
@@ -47,12 +51,12 @@ export function ProjectCard({ project, titleAs }: { project: ProjectItemType, ti
           <div className='flex flex-col sm:flex-row justify-center sm:justify-start items-start sm:items-center gap-4'>
             <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full">
               <Image
-                src={project.logo ?? `https://www.google.com/s2/favicons?domain=${project.link.href}&sz=32`}
-                alt={`${project.name} favicon`}
+                src={faviconUrl}
+                alt={`${project.name} logo - ${project.description}`}
                 width={36}
                 height={36}
-                sizes='36px'
-                className="rounded-full"
+                className="rounded-full w-[36px] h-[36px] object-contain"
+                loading="lazy"
               />
             </div>
             <Component className="text-base font-semibold">

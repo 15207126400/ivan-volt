@@ -66,10 +66,13 @@ export function IconCloud({ iconSlugs }: DynamicCloudProps) {
   const [data, setData] = useState<IconData | null>(null);
   const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     setMounted(true);
-    fetchSimpleIcons({ slugs: iconSlugs }).then(setData);
+    fetchSimpleIcons({ slugs: iconSlugs })
+      .then(setData)
+      .finally(() => setIsLoading(false));
   }, [iconSlugs]);
 
   const renderedIcons = useMemo(() => {
@@ -79,6 +82,10 @@ export function IconCloud({ iconSlugs }: DynamicCloudProps) {
       renderCustomIcon(icon, theme || "light"),
     );
   }, [data, theme]);
+
+  if (isLoading) {
+    return <div className="animate-pulse h-[300px] w-full bg-muted rounded-lg" />;
+  }
 
   if (!mounted) {
     return null;
