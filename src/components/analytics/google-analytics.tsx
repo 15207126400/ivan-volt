@@ -8,5 +8,5 @@ import { GoogleAnalytics } from "@next/third-parties/google";
  * https://analytics.google.com
  */
 export default function Analytics() {
-  return <GoogleAnalytics gaId="G-XXXXXXXXXX" />;
+  return <GoogleAnalytics gaId="G-XMLY2DWWV4" />;
 }

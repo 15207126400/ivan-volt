@@ -1,3 +1,5 @@
+import GoogleAnalytics from "./google-analytics";
+
 export function Analytics() {
   if (process.env.NODE_ENV !== "production") {
     return null;
@@ -5,6 +7,7 @@ export function Analytics() {
 
   return (
     <>
+      <GoogleAnalytics />
     </>
   );
 }
